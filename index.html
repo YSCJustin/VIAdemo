@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="食乜嘢啊?! Demo">
+<script src="https://cdn.jsdelivr.net/npm/ol@v10.6.1/dist/ol.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.6.1/ol.css">
+
+    <script src="./script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食乜嘢啊?! Demo</title>
+    <style>
+     body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+
+            margin: 20px;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+        }
+
+        .restaurant {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+        h2 {
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>食乜嘢啊?! Demo</h1> <p><a href="https://yscjustin.dev/projects" target="_blank">Other silly projects</a></p>
+    <div id="map"></div>
+
+    <div id="zoomback" style="margin-top: 10px">
+        <button id="zoomback" style="size: 100%;">Zoom Back</button>
+    </div>
+    <p>Current location: <div id="roke"></div></p>
+
+
+    <br>
+
+    <div class="distance">
+        <h2>Distance range (metres)</h2>
+        <label for="distance">Search radius:</label>
+        <input type="number" id="distance" name="distance" placeholder="1000">
+        <p class="error" id="distance-error"></p>
+    </div>
+    <button id="filter">Filter Distance</button>
+            <h2>Cuisine (include, leave all empty if no preference)</h2>
+    <div class="cuisine" id="cuisine" style="margin: 90px; margin-top: 0; margin-bottom: 0;">
+
+    </div>
+
+    <br>
+    <button id="search" name="search">Search & Draw</button>
+    <br>
+    <br>
+    <h2>Result</h2>
+    <p><div id="results"></div><br><div id="resultcuisines"></div><br><div id="address"></div><div id="addresslink"></div></p>
+    <button id="resultzoom" hidden>Zoom Back</button>
+    <br>
+    <br>
+    <div id="resultmap" name="map"></div>
+
+    <br>
+    <p><b>Your location data is only used for the map and isn't shared with anyone else</b></p>
+    <p><div id="disclaimer"></div></p>
+    <br>
+    <br>
+</body>
+</html>
