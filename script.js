@@ -9,6 +9,7 @@ const submitsearch = document.getElementById('search');
 const resultmap = document.getElementById('resultmap');
 const addresslink = document.getElementById('addresslink');
 const resultzoom = document.getElementById('resultzoom');
+const restaurantcount= document.getElementById('restaurant-count');
 let userLocation;
 let marker;
 let position = null;
@@ -165,6 +166,7 @@ if (navigator.geolocation) {
 })
         filterdis.addEventListener('click', function() {
             if(position === null) return;
+            restaurantcount.textContent = ``;
                                             resultmap.style.width = '0%';
                                 resultmap.style.height = '0';
             resultmap.style.margin = '0 auto';
@@ -217,6 +219,7 @@ if (navigator.geolocation) {
             cuisineDiv.innerHTML = 'No cuisines found in this area.';
         } else {
             cuisineDiv.innerHTML = '';
+            restaurantcount.textContent = `Found ${data.elements.length} restaurants.`;
         }
         sortedCuisines.forEach(cuisine => {
             const label = document.createElement('label');
