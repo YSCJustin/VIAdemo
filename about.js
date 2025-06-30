@@ -3,7 +3,7 @@ async function wait(ms){
 }
 let length = 100;
 const lyricsElement = document.getElementById("lyrics");
-
+// https://www.uta-net.com/song/357041/ 作詞：岡本優星
 let lyrics = `This　is　fate　with　you　　　　　Hello　Mellow　甘い果汁　　　　　この痛みも　　　　　　　　　　今年味を求めている　　　　　　　　　　
                   アツアツ　　　　 解け焦げた砂糖　　　　　　　のような硬い表情　　　　 甘党と葛藤繰り返してる　　　　　　　　　　　 TEL...　　　　　　　　　雨模様の放課後　　　　　　　　　　　「こんなのはどうだろう」　　　　悪戯に微笑む
 　　　　　　　　　　　ふわって　　　　　　　　尼そぎが風に揺れる　　　　　まだ僕ら孤独な過去に生きてる　　　　　小賢しさも執念深さも片がつく　　　　　あの星を目指した！
